@@ -3,10 +3,12 @@ package com.dibyajit.portfoliobackend.service.imple;
 import com.dibyajit.portfoliobackend.model.Experience;
 import com.dibyajit.portfoliobackend.repository.ExperienceRepo;
 import com.dibyajit.portfoliobackend.service.ExperienceService;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.UUID;
 
+@Service
 public class ExperienceServiceImple implements ExperienceService {
 
     private final ExperienceRepo experienceRepo;
