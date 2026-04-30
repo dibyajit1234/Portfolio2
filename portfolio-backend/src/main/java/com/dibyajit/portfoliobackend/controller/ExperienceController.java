@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.UUID;
 
-@Controller
+@RestController
 @RequestMapping(path = "/api/experience")
 public class ExperienceController {
     private final ExperienceMapper experienceMapper;

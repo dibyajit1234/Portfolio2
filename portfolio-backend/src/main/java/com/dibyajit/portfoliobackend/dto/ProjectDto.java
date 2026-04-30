@@ -9,6 +9,6 @@ public record ProjectDto(
         String techStack,
         String githib,
         String liveUrl,
-        byte[] image
+        String image
 ) {
 }

@@ -34,7 +34,6 @@ public class Project {
     @Column(name = "live_url")
     private String liveUrl;
 
-    @Lob
     @Column(columnDefinition = "BYTEA")
     private byte[] image;
 

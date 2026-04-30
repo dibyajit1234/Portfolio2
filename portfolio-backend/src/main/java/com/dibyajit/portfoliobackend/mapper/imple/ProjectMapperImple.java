@@ -5,10 +5,15 @@ import com.dibyajit.portfoliobackend.mapper.ProjectMapper;
 import com.dibyajit.portfoliobackend.model.Project;
 import org.springframework.stereotype.Component;
 
+import java.util.Base64;
+
 @Component
 public class ProjectMapperImple implements ProjectMapper {
     @Override
     public Project fromDto(ProjectDto projectDto) {
+        byte[] imageBytes = projectDto.image() != null && !projectDto.image().isEmpty()
+                ? Base64.getDecoder().decode(projectDto.image())
+                : null;
         return new Project(
                 projectDto.id(),
                 projectDto.title(),
@@ -16,12 +21,15 @@ public class ProjectMapperImple implements ProjectMapper {
                 projectDto.techStack(),
                 projectDto.githib(),
                 projectDto.liveUrl(),
-                projectDto.image()
+                imageBytes
         );
     }
 
     @Override
     public ProjectDto toDto(Project project) {
+        String imageBase64 = project.getImage() != null
+                ? Base64.getEncoder().encodeToString(project.getImage())
+                : null;
         return new ProjectDto(
                 project.getId(),
                 project.getTitle(),
@@ -29,7 +37,7 @@ public class ProjectMapperImple implements ProjectMapper {
                 project.getTechStack(),
                 project.getGithub(),
                 project.getLiveUrl(),
-                project.getImage()
+                imageBase64
         );
     }
 }

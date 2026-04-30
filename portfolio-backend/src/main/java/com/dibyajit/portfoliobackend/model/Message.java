@@ -17,6 +17,7 @@ import java.util.UUID;
 public class Message {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
+    @Column(name = "id",nullable = false,updatable = false)
     private UUID id;
 
     @Column(name = "name",nullable = false)
@@ -31,6 +32,6 @@ public class Message {
     @Column(name = "message")
     private String message;
 
-    @Column(name = "createdAt",nullable = false)
+    @Column(name = "created_at")
     private LocalDateTime createdAt=LocalDateTime.now();
 }
