@@ -3,9 +3,10 @@ package com.dibyajit.portfoliobackend.service.imple;
 import com.dibyajit.portfoliobackend.model.Message;
 import com.dibyajit.portfoliobackend.repository.MessageRepo;
 import com.dibyajit.portfoliobackend.service.MessageService;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
-
+@Component
 public class MessageServiceImple implements MessageService {
     private final MessageRepo messageRepo;
 

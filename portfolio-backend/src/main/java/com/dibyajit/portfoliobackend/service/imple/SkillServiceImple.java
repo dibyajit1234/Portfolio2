@@ -3,12 +3,13 @@ package com.dibyajit.portfoliobackend.service.imple;
 import com.dibyajit.portfoliobackend.model.Skill;
 import com.dibyajit.portfoliobackend.repository.SkillsRepo;
 import com.dibyajit.portfoliobackend.service.SkillService;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.UUID;
 
-@Service
+@Component
 public class SkillServiceImple implements SkillService {
 
     private final SkillsRepo skillsRepo;

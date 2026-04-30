@@ -3,7 +3,9 @@ package com.dibyajit.portfoliobackend.mapper.imple;
 import com.dibyajit.portfoliobackend.dto.ProjectDto;
 import com.dibyajit.portfoliobackend.mapper.ProjectMapper;
 import com.dibyajit.portfoliobackend.model.Project;
+import org.springframework.stereotype.Component;
 
+@Component
 public class ProjectMapperImple implements ProjectMapper {
     @Override
     public Project fromDto(ProjectDto projectDto) {

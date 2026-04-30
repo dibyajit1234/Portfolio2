@@ -3,12 +3,13 @@ package com.dibyajit.portfoliobackend.service.imple;
 import com.dibyajit.portfoliobackend.model.Project;
 import com.dibyajit.portfoliobackend.repository.ProjectRepo;
 import com.dibyajit.portfoliobackend.service.ProjectService;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.UUID;
 
-@Service
+@Component
 public class ProjectServiceImple implements ProjectService {
 
     private final ProjectRepo projectRepo;
